@@ -1,2 +1,2 @@
-# javaDesk
-JavaDesktop code examples 
+# Java Desk
+Java Desktop code examples 
