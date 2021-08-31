@@ -43,6 +43,45 @@ public class Main {
         System.out.println("Data types are divided into two groups:");
         System.out.println("Primitive data types - includes byte, short, int, long, float, double, boolean and char");
         System.out.println("Non-primitive data types - such as String, Arrays and Classes (you will learn more about these in a later chapter)");
+        int myNum_2 = 5;               // Integer (whole number)
+        float myFloatNum_2 = 5.99f;    // Floating point number
+        char myLetter_2 = 'D';         // Character
+        boolean myBool_2 = true;       // Boolean
+        String myText_2 = "Hello";     // String
+        System.out.println("Example: //in code " + myNum_2 +" "+ myFloatNum_2+" "+ myLetter_2 +" "+myBool_2 +" "+ myText_2);
         System.out.println("--------------------------------------------------------------------------------------------------------------------------------------------------");
     }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 }
