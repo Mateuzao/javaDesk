@@ -7,13 +7,12 @@ import java.awt.Label;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.util.Scanner;
-import javax.swing.JFrame;
-import javax.swing.JOptionPane;
+import javax.swing.*;
 
 public class CalculadoraSimples {
 
     public static void main(String[] args) {
-        JOptionPane.showMessageDialog(null, "Calculadora Simples.");
+        //JOptionPane.showMessageDialog(null, "Calculadora Simples.");
 
         // Declaração das variáveis
         final int[] op1 = new int[1];
@@ -23,9 +22,9 @@ public class CalculadoraSimples {
 
         // Criação da janela da calculadora
         JFrame janela = new JFrame("Calculadora Simples");
-        janela.setSize(300, 200);
         janela.setLayout(new GridLayout(4, 4));
-
+        janela.setSize(300, 200);
+        janela.setVisible(true);
 
         // Criação dos botões numéricos
         for (int i = 0; i <= 9; i++) {
@@ -54,8 +53,10 @@ public class CalculadoraSimples {
                 // Define a operação
                 operacao[0] = '+';
             }
+
         });
         janela.add(botaoMais);
+        janela.setVisible(true);
 
         Button botaoMenos = new Button("-");
         botaoMenos.addActionListener(new ActionListener() {
@@ -71,6 +72,7 @@ public class CalculadoraSimples {
             }
         });
         janela.add(botaoMenos);
+        janela.setVisible(true);
 
         Button botaoVezes = new Button("*");
         botaoVezes.addActionListener(new ActionListener() {
@@ -86,6 +88,7 @@ public class CalculadoraSimples {
             }
         });
         janela.add(botaoVezes);
+        janela.setVisible(true);
 
         Button botaoDivisao = new Button("/");
         botaoDivisao.addActionListener(new ActionListener() {
@@ -101,6 +104,7 @@ public class CalculadoraSimples {
             }
         });
         janela.add(botaoDivisao);
+        janela.setVisible(true);
 
         // Criação do botão de igual
         Button botaoIgual = new Button("=");
@@ -128,10 +132,21 @@ public class CalculadoraSimples {
                         if (op2[0] == 0) {
                             JOptionPane.showMessageDialog(null, "Divisão por zero não é permitida.");
 
+                        }else {
+                            resultado[0] = op1[0] / op2[0];
+                            break;
                         }
+                    default:
+                        JOptionPane.showMessageDialog(null, "Resultado" + resultado[0]);
+                        break;
 
                 }
+
             }
         });
+        janela.add(botaoIgual);
+        janela.setVisible(true);
+
+
     }
 }
