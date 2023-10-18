@@ -9,7 +9,7 @@ import java.awt.event.ActionListener;
 import java.util.Scanner;
 import javax.swing.*;
 
-public class CalculadoraSimples {
+public class CalculadoraSimples  {
 
     public static void main(String[] args) {
         //JOptionPane.showMessageDialog(null, "Calculadora Simples.");
@@ -29,9 +29,10 @@ public class CalculadoraSimples {
         // Criação dos botões numéricos
         for (int i = 0; i <= 9; i++) {
             Button botao = new Button(Integer.toString(i));
+            //botao.addActionListener((ActionListener) new Label());
             botao.addActionListener(new ActionListener() {
                 @Override
-                public void actionPerformed(ActionEvent e) {
+                public void actionPerformed(ActionEvent e)  {
                     // Adiciona o número do botão à tela
                     Label display = (Label) janela.getContentPane().getComponent(0);
                     display.setText(display.getText() + e.getActionCommand());
